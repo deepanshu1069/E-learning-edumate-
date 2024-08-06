@@ -1,92 +1,122 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz title goes here</title>
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../styles/quiz.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <title>Profile</title>
+    <link rel="shortcut icon" href="../images/logo2.png" type="image/png">
 </head>
 
 <body>
-    <div class="main_container">
-        <!-- start Quiz button -->
-        <div class="start_btn">
-            <button>Start Quiz</button>
-            <a href="quiz_info.html"><button>Exit</button></a>
-        </div>
 
-        <!-- Info Box -->
-        <div class="info_box">
-            <div class="info-title"><span>Some Rules of this Quiz</span></div>
-            <div class="info-list">
-                <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-                <div class="info">2. Once you select your answer, it can't be undone.</div>
-                <div class="info">3. You can't select any option once time goes off.</div>
-                <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-                <div class="info">5. You'll get points on the basis of your correct answers.</div>
-            </div>
-            <div class="buttons">
-                <button class="quit">Exit Quiz</button>
-                <button class="restart">Continue</button>
-            </div>
-        </div>
+    <!-- nav bar -->
+    <div class="nav">
+        <h2 id="logo">
+            <img class="edu" src="../images/logo.png" alt="logo">
+            <a href="home.html">Edumate</a>
+        </h2>
+        <ul id="items">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()">Learn
+                        <i class='bx bxs-down-arrow'></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="roadmaps.html">Roadmaps</a>
+                        <a href="tutorials.html">Courses</a>
+                        <a href="quizz.html">Quiz</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="redeem.html">Redeem</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="profile.html">Profile</a></li>
 
-        <!-- Quiz Box -->
-        <div class="quiz_box">
-            <header>
-                <div class="title">Quiz title</div>
-                <div class="timer">
-                    <div class="time_left_txt">Time Left</div>
-                    <div class="timer_sec">15</div>
+            <li>
+                <div>
+                    <button class="logout-btn" onclick="logOut()">Logout</button>
                 </div>
-                <!-- <div class="time_line"></div> -->
-            </header>
-            <section>
-                <div class="que_text">
-                    <!-- Here I've inserted question from JavaScript -->
-                </div>
-                <div class="option_list">
-                    <!-- Here I've inserted options from JavaScript -->
-                </div>
-            </section>
+            </li>
+        </ul>
+        <i id="bar" class='bx bx-menu-alt-right'></i>
+    </div>
+    <!-- navbar ends -->
 
-            <!-- footer of Quiz Box -->
-            <footer>
-                <div class="total_que">
-                    <!-- Here I've inserted Question Count Number from JavaScript -->
-                </div>
-                <button class="next_btn">Next Que</button>
-            </footer>
-        </div>
-
-        <!-- Result Box -->
-        <div class="result_box">
-            <div class="icon">
-                <i class='bx bxs-trophy'></i>
-            </div>
-            <div class="complete_text">You've completed the Quiz!</div>
-            <div class="score_text">
-                <!-- Here I've inserted Score Result from JavaScript -->
-            </div>
-            <div class="buttons">
-                <button class="restart">Replay Quiz</button>
-                <button class="quit">Quit Quiz</button>
+    <div class="profile-hero">
+        <div class="row">
+            <img src="../images/profile.png" alt="user">
+            <div class="info">
+                <h3>User Name</h3>
+                <p><b>Coins Earned : </b>00</p>
             </div>
         </div>
     </div>
-    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="../script/quiz-question-demo.js"></script>
 
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="../script/quiz.js"></script>
+    <div class="basic-container">
+        <h3>Basic Info</h3>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td contenteditable="true">User Name</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td contenteditable="true">enter your gender</td>
+            </tr>
+            <tr>
+                
+               <td>Location</td>
+                <td contenteditable="true">your loaction</td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td contenteditable="true">your birthday date</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td contenteditable="true">link of your website</td>
+            </tr>
+            <tr>
+                <td>Linkedin</td>
+                <td contenteditable="true">link of your linkedin profile</td>
+            </tr>
+            <tr>
+                <td>Github</td>
+                <td contenteditable="true">link of your github profile</td>
+            </tr>
+        </table>
+        <h3>Experince</h3>
+        <table>
+            <tr>
+                <td>Work</td>
+                <td contenteditable="true">enter your work experince if any</td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td contenteditable="true">enter your education if any</td>
+            </tr>
+        </table>
+        <h3>Skills</h3>
+        <table>
+            <tr>
+                <td>Technical Skills</td>
+                <td contenteditable="true">enter your technical skills</td>
+            </tr>
+        </table>
+        <button id="save">SAVE</button>
+    </div>
 
+    <script src="../script/navbar.js"></script>
+    <script>
+        const save=  document.querySelector("#save");
+        save.addEventListener("click", function(){
+            alert("information updated.");
+        });
+    </script>
 </body>
-
-</html>
 
 </html>
